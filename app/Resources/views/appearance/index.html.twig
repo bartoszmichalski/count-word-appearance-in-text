@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Appearances list</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for appearance in appearances %}
+            <tr>
+                <td>{{ appearance.word }}</td>
+                <td>{{ appearance.count }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
